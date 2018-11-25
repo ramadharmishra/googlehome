@@ -21,5 +21,6 @@ export async function handler(dialogflowApp: DialogflowApp) {
   // Call Salesforce.
   let response = await salesforceProxy.showReport(report);
 
+  
   dialogflowApp.ask(response.data as string);
 }
